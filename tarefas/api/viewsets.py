@@ -11,7 +11,7 @@ from tarefas import models
 
 
 class ListarTarefasAPIView(ListCreateAPIView):
-    # permission_classes = [IsAuthenticated] #permitindo que view seja autenticada
+    # permission_classes = [IsAuthenticated] #permite que view seja autenticada
 
     serializer_class = TarefasSerializer
     queryset = models.Tarefa.objects.all()

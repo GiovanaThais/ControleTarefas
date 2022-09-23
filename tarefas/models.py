@@ -41,7 +41,8 @@ class Tarefa(models.Model):
                                  default='importante')
     status = models.CharField("status", max_length=25, choices=OPCOES_STATUS,
                              default='pendente')
-    data_entrega = models.DateField("data_entrega", auto_now_add=False, blank=False, null=True, default=None)
+    data_entrega = models.DateField("data_entrega", auto_now_add=False, blank=False,
+                                     null=True, default=None) #formato igual a: aaaa/mm/dd
     complexidade = models.CharField("complexidade", max_length=25, blank=True, null=True,
                                     choices=OPCOES_COMPLEXIDADE)
     pessoas = models.ManyToManyField(Pessoa)

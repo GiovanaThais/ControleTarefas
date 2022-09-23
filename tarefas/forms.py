@@ -35,7 +35,7 @@ class EditarTarefaForm(forms.Form):
     tarefa = forms.CharField(max_length=400)
     categoria = forms.ChoiceField(choices=OPCOES_CATEGORIA)
     complexidade = forms.ChoiceField(choices=OPCOES_COMPLEXIDADE)
-    data_entrega = forms.DateField()
+    data_entrega = forms.DateField()  #formato igual a: aaaa/mm/dd
     pessoas = forms.ModelMultipleChoiceField(
                        widget = forms.CheckboxSelectMultiple,
                        queryset = Pessoa.objects.all()
